@@ -13,7 +13,7 @@ export const resumeData = {
     links: {
       linkedin: "https://www.linkedin.com/in/abhishek-singh-2b96961a0/",
       github: "https://github.com/abhi002shek",
-      githubProject: "https://github.com/abhi002shek/3-tier-devsecops-project",
+      githubProject: "https://github.com/abhi002shek/3-tier-devsecops-project, https://github.com/abhi002shek/Health-tracker.git",
     },
   },
 
