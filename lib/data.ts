@@ -11,7 +11,7 @@ export const resumeData = {
     email: "itsabhishek1531@gmail.com",
     phone: "+91 7075791531",
     links: {
-      linkedin: "www.linkedin.com/in/abhishek-singh-1531ma",
+      linkedin: "www.linkedin.com/in/abhishek-singh-2b96961a0",
       github: "https://github.com/abhi002shek",
       githubProject: "https://github.com/abhi002shek/3-tier-devsecops-project, https://github.com/abhi002shek/Health-tracker.git",
     },
