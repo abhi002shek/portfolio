@@ -34,7 +34,7 @@ export default function AnimatedBackground() {
     let height = window.innerHeight;
     let animId: number;
     const particles: Particle[] = [];
-    const SKILL_LABELS = ["GitHub Actions", "GitLab", "GCP", "Azure"];
+    const SKILL_LABELS = ["GitHub Actions", "GitLab", "GCP", "Azure", "Terraform", "Kubernetes", "Docker", "Python", "ArgoCD", "Helm"];
     const labels: FloatingLabel[] = [];
 
     function resize() {
@@ -131,7 +131,7 @@ export default function AnimatedBackground() {
       }
 
       // Draw floating skill labels
-      ctx!.font = "500 11px 'JetBrains Mono', monospace";
+      ctx!.font = "600 13px 'JetBrains Mono', monospace";
       for (const lbl of labels) {
         lbl.x += lbl.vx;
         lbl.y += lbl.vy;
@@ -139,7 +139,16 @@ export default function AnimatedBackground() {
         if (lbl.x > width + 80) lbl.x = -80;
         if (lbl.y < 0) lbl.y = height;
         if (lbl.y > height) lbl.y = 0;
-        ctx!.fillStyle = `rgba(0, 212, 255, ${lbl.opacity})`;
+        // pill background
+        const tw = ctx!.measureText(lbl.text).width;
+        ctx!.fillStyle = `rgba(0, 212, 255, 0.06)`;
+        ctx!.beginPath();
+        ctx!.roundRect(lbl.x - 8, lbl.y - 14, tw + 16, 22, 6);
+        ctx!.fill();
+        ctx!.strokeStyle = `rgba(0, 212, 255, 0.18)`;
+        ctx!.lineWidth = 0.8;
+        ctx!.stroke();
+        ctx!.fillStyle = `rgba(0, 212, 255, 0.55)`;
         ctx!.fillText(lbl.text, lbl.x, lbl.y);
       }
 

@@ -31,8 +31,10 @@ export default function HeroSection() {
           variants={stagger.container}
           initial="hidden"
           animate="show"
-          className="max-w-4xl"
+          className="grid md:grid-cols-2 gap-12 items-center"
         >
+          {/* LEFT — main content */}
+          <div className="max-w-2xl">
           {/* Status badge */}
           <motion.div variants={stagger.item} className="mb-8">
             <span className="inline-flex items-center gap-2 chip-gold">
@@ -130,6 +132,56 @@ export default function HeroSection() {
                 <div className="text-xs text-muted leading-relaxed">{item.context}</div>
               </motion.div>
             ))}
+          </motion.div>
+          </div>
+
+          {/* RIGHT — YAML decorative card */}
+          <motion.div
+            variants={stagger.item}
+            className="hidden md:block"
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="glass-bright rounded-2xl border border-accent/20 overflow-hidden shadow-2xl"
+              style={{ boxShadow: "0 0 60px rgba(0,212,255,0.12), 0 0 120px rgba(123,97,255,0.06)" }}
+            >
+              {/* Window chrome */}
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border/40 bg-surface/50">
+                <span className="w-3 h-3 rounded-full bg-red-500/70" />
+                <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                <span className="w-3 h-3 rounded-full bg-green-500/70" />
+                <span className="ml-3 font-mono text-xs text-muted">infrastructure.yaml</span>
+              </div>
+              {/* YAML content */}
+              <div className="p-6 font-mono text-sm leading-7">
+                <div><span className="text-accent2">apiVersion</span><span className="text-subtle">: </span><span className="text-gold">v1</span></div>
+                <div><span className="text-accent2">kind</span><span className="text-subtle">: </span><span className="text-green-400">Engineer</span></div>
+                <div><span className="text-accent2">metadata</span><span className="text-subtle">:</span></div>
+                <div className="pl-4"><span className="text-accent">name</span><span className="text-subtle">: </span><span className="text-text">abhishek-singh</span></div>
+                <div className="pl-4"><span className="text-accent">namespace</span><span className="text-subtle">: </span><span className="text-text">devops</span></div>
+                <div><span className="text-accent2">spec</span><span className="text-subtle">:</span></div>
+                <div className="pl-4"><span className="text-accent">experience</span><span className="text-subtle">: </span><span className="text-gold">3y</span></div>
+                <div className="pl-4"><span className="text-accent">location</span><span className="text-subtle">: </span><span className="text-text">Hyderabad, India</span></div>
+                <div className="pl-4"><span className="text-accent">skills</span><span className="text-subtle">:</span></div>
+                {["kubernetes", "terraform", "aws", "python", "ci-cd"].map((s) => (
+                  <div key={s} className="pl-8"><span className="text-subtle">- </span><span className="text-green-400">{s}</span></div>
+                ))}
+                <div className="pl-4"><span className="text-accent">traits</span><span className="text-subtle">:</span></div>
+                {["automation-obsessed", "uptime-defender", "cost-optimizer"].map((t) => (
+                  <div key={t} className="pl-8"><span className="text-subtle">- </span><span className="text-accent2">{t}</span></div>
+                ))}
+                <div className="pl-4 flex items-center gap-1">
+                  <span className="text-accent">status</span><span className="text-subtle">: </span>
+                  <span className="text-green-400">available</span>
+                  <motion.span
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                    className="inline-block w-2 h-4 bg-accent ml-1 rounded-sm"
+                  />
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
