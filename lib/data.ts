@@ -115,6 +115,21 @@ export const resumeData = {
 
   projects: [
     {
+      title: "Kubernetes AI Agent",
+      subtitle: "Open-source AI-powered diagnostics for live Kubernetes clusters",
+      link: "https://github.com/abhi002shek/Kubernetes-AI-Agent",
+      stack: [
+        "FastAPI", "Next.js", "OpenRouter", "PostgreSQL",
+        "Kubernetes", "Docker", "JWT", "Python",
+      ],
+      bullets: [
+        "Built an open-source AI Kubernetes troubleshooting agent that connects to live clusters via kubectl, aggregates pod logs/events/deployments/network/node/PVC evidence, and returns root cause + remediation commands via LLM reasoning.",
+        "Designed a multi-stage K8s investigation pipeline (7 collectors → structured JSON → LLM) with realtime progress, authenticated API (JWT), investigation history, and Docker Compose deployment.",
+        "Applied LLM orchestration to operational data: evidence collection, prompt design, JSON diagnosis parsing, confidence scoring, and failure handling for unreachable clusters/timeouts.",
+        "Validated with KIND failure scenarios — CrashLoop, ImagePull, OOM, selector mismatch.",
+      ],
+    },
+    {
       title: "3-Tier Cloud-Native DevSecOps Platform",
       subtitle: "Production-grade, end-to-end cloud platform built from scratch",
       link: "https://github.com/abhi002shek/3-tier-devsecops-project",

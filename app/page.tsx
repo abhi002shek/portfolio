@@ -5,6 +5,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import SplashScreen from "@/components/SplashScreen";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
+import TechOrbit from "@/components/TechOrbit";
 import ExperienceSection from "@/components/ExperienceSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import ProjectSection from "@/components/ProjectSection";
@@ -32,6 +33,8 @@ export default function Home() {
         >
           <Navigation />
           <HeroSection />
+
+          <TechOrbit />
 
           {/* Subtle section separator */}
           <div className="max-w-6xl mx-auto px-6">

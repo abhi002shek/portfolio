@@ -7,6 +7,12 @@ interface Particle {
   size: number; opacity: number;
 }
 
+interface FloatingLabel {
+  x: number; y: number;
+  vx: number; vy: number;
+  text: string; opacity: number;
+}
+
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -28,6 +34,8 @@ export default function AnimatedBackground() {
     let height = window.innerHeight;
     let animId: number;
     const particles: Particle[] = [];
+    const SKILL_LABELS = ["GitHub Actions", "GitLab", "GCP", "Azure"];
+    const labels: FloatingLabel[] = [];
 
     function resize() {
       width = window.innerWidth;
@@ -50,6 +58,17 @@ export default function AnimatedBackground() {
           opacity: Math.random() * 0.4 + 0.1,
         });
       }
+      labels.length = 0;
+      SKILL_LABELS.forEach((text, i) => {
+        labels.push({
+          x: (width / (SKILL_LABELS.length + 1)) * (i + 1),
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.15,
+          vy: (Math.random() - 0.5) * 0.15,
+          text,
+          opacity: 0.18,
+        });
+      });
     }
 
     function drawGradientMesh() {
@@ -109,6 +128,19 @@ export default function AnimatedBackground() {
             ctx!.stroke();
           }
         }
+      }
+
+      // Draw floating skill labels
+      ctx!.font = "500 11px 'JetBrains Mono', monospace";
+      for (const lbl of labels) {
+        lbl.x += lbl.vx;
+        lbl.y += lbl.vy;
+        if (lbl.x < -80) lbl.x = width + 80;
+        if (lbl.x > width + 80) lbl.x = -80;
+        if (lbl.y < 0) lbl.y = height;
+        if (lbl.y > height) lbl.y = 0;
+        ctx!.fillStyle = `rgba(0, 212, 255, ${lbl.opacity})`;
+        ctx!.fillText(lbl.text, lbl.x, lbl.y);
       }
 
       animId = requestAnimationFrame(draw);
