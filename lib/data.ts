@@ -45,7 +45,7 @@ export const resumeData = {
       vendor: "Blue Arrow – Vendor | Internal Platform Team",
       location: "Edinburgh, UK",
       dates: "March 2022 – January 2025",
-      duration: "2 yrs 10 mos",
+      duration: "2 yrs 11 mos",
       bullets: [
         "Designed and built CI/CD pipelines that automated code integration, testing, containerisation, and deployment across AWS environments — from commit to production with zero manual steps.",
         "Wrote Python-based automation scripts to perform deployment validations, health checks, configuration verification, and environment consistency checks.",
