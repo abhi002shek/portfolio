@@ -6,7 +6,7 @@ export const resumeData = {
     subtitle: "SRE · Platform Engineer · Cloud Infrastructure",
     tagline: "I build infrastructure that doesn't ask for attention — it just works.",
     summary:
-      "Nearly 3 years at Lloyds Banking Group designing secure CI/CD systems, automating cloud infrastructure, and owning Kubernetes deployments that kept a production banking platform reliable at scale. I write Python and Bash to automate everything automatable, approach every architecture decision with security baked in from the start, and thrive in high-standard engineering environments where ownership is taken seriously.",
+      "3 years at Lloyds Banking Group designing secure CI/CD systems, automating cloud infrastructure, and owning Kubernetes deployments that kept a production banking platform reliable at scale. I write Python and Bash to automate everything automatable, approach every architecture decision with security baked in from the start, and thrive in high-standard engineering environments where ownership is taken seriously.",
     location: "Hyderabad, India",
     email: "itsabhishek1531@gmail.com",
     phone: "+91 7075791531",
@@ -44,8 +44,8 @@ export const resumeData = {
       role: "DevOps Engineer / Operations Analyst",
       vendor: "Blue Arrow – Vendor | Internal Platform Team",
       location: "Edinburgh, UK",
-      dates: "March 2022 – January 2025",
-      duration: "2 yrs 11 mos",
+      dates: "Feb 2022 – January 2025",
+      duration: "3 years",
       bullets: [
         "Designed and built CI/CD pipelines that automated code integration, testing, containerisation, and deployment across AWS environments — from commit to production with zero manual steps.",
         "Wrote Python-based automation scripts to perform deployment validations, health checks, configuration verification, and environment consistency checks.",
