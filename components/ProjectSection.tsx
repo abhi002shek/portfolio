@@ -47,9 +47,9 @@ export default function ProjectSection() {
                 <div className="grid md:grid-cols-2 gap-12">
                   {/* Left */}
                   <div>
-                    {idx === 0 && (
+                    {project.badge && (
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-accent/10 border border-accent/20 text-accent mb-4">
-                        🤖 AI Project
+                        {project.badge}
                       </span>
                     )}
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-text mb-2">
