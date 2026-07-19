@@ -117,6 +117,7 @@ export const resumeData = {
     {
       title: "Kubernetes AI Agent",
       subtitle: "Open-source AI-powered diagnostics for live Kubernetes clusters",
+      badge: "AI Project",
       link: "https://github.com/abhi002shek/Kubernetes-AI-Agent",
       stack: [
         "FastAPI", "Next.js", "OpenRouter", "PostgreSQL",
@@ -132,6 +133,7 @@ export const resumeData = {
     {
       title: "3-Tier Cloud-Native DevSecOps Platform",
       subtitle: "Production-grade, end-to-end cloud platform built from scratch",
+      badge: "DevSecOps Platform",
       link: "https://github.com/abhi002shek/3-tier-devsecops-project",
       stack: [
         "AWS", "Terraform", "Kubernetes", "Docker", "Helm",
@@ -146,6 +148,25 @@ export const resumeData = {
         "Built a Python FastAPI backend and React front-end deployed as containerised microservices through the CI/CD pipeline.",
         "Applied DevSecOps throughout: IAM scoped permissions, Kubernetes RBAC, secrets isolation, and automated security scanning in the pipeline.",
         "Wrote full documentation suite: runbooks, SOPs, architecture docs, and troubleshooting playbooks.",
+      ],
+    },
+    {
+      title: "EventPulse Secure DevOps Platform",
+      subtitle: "FastAPI event-booking platform evolved into a signed, policy-controlled AWS EKS deployment",
+      badge: "AWS EKS Project",
+      link: "https://github.com/abhi002shek/eventpulse",
+      stack: [
+        "Python FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic",
+        "Docker", "GitHub Actions", "GHCR", "Cosign",
+        "Helm", "Kubernetes", "Kyverno", "AWS EKS",
+        "RDS", "Prometheus", "Grafana", "CloudWatch", "Terraform",
+      ],
+      bullets: [
+        "Built EventPulse as a secure FastAPI event-booking platform with PostgreSQL, SQLAlchemy, Alembic, typed Pydantic schemas, health/readiness endpoints, and transaction-safe booking logic.",
+        "Implemented PostgreSQL row-level locking to prevent overselling during concurrent ticket bookings, with integration tests covering success, failure, and concurrency paths.",
+        "Designed DevSecOps automation with GitHub Actions, Gitleaks, Trivy, SonarQube, GHCR publishing, SBOM/provenance generation, and Cosign keyless image signing.",
+        "Packaged the application for Kubernetes with Helm using immutable image digests, migration/seed Jobs, probes, HPA, PDB, resource limits, NetworkPolicies, and hardened pod security contexts.",
+        "Deployed and validated on AWS with Terraform-managed VPC, private EKS nodes, private RDS PostgreSQL, Secrets Manager, ALB demo access, Prometheus/Grafana dashboards, CloudWatch logs, Kyverno policies, and resilience testing.",
       ],
     },
   ],
